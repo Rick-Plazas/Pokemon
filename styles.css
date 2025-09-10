@@ -1,0 +1,1047 @@
+
+:root{
+
+    --type-gray: #ececec;
+
+
+    --type-normal:#A8A77A;
+    --type-fire:#EC5800;
+    --type-water:#70e0bb;
+    --type-grass:#68b023;
+    --type-bug: #e8e878;
+    --type-dark:#400a58;
+    --type-dragon:#e6b05d;
+    --type-fairy:#ffc3d0;
+    --type-fighting:#bd3c5a;
+    --type-flying:#4a7ca7;
+    --type-ghost:#866db6;
+    --type-ground:#E2BF65;
+    --type-electric:#f8f818;
+    --type-ice:#6ac6de;
+    --type-poison:#a584ce;
+    --type-psychic:#c9a8c7;
+    --type-rock:#beb6b6;
+    --type-steel:#b0a9a7;
+}
+
+.normal{
+    background-color: var(--type-normal);
+    color: black;
+}
+.fire{
+    background-color: var(--type-fire);
+    color: black;
+}
+.water{
+    background-color: var(--type-water);
+    color: black;
+}
+.grass{
+    background-color: var(--type-grass);
+    color: black;
+}
+.bug{
+    background-color: var(--type-bug);
+    color: black;
+}
+.dark{
+    background-color: var(--type-dark);
+    color: black;
+}
+.dragon{
+    background-color: var(--type-dragon);
+    color: black;
+}
+.fairy{
+    background-color: var(--type-fairy);
+    color: black;
+}
+.fighting{
+    background-color: var(--type-fighting);
+    color: black;
+}
+.flying{
+    background-color: var(--type-flying);
+    color: black;
+}
+.ghost{
+    background-color: var(--type-ghost);
+    color: black;
+}
+.ground{
+    background-color: var(--type-ground);
+    color: black;
+}
+.electric{
+    background-color: var(--type-electric);
+    color: black;
+}
+.ice{
+    background-color: var(--type-normal);
+    color: black;
+}
+.poison{
+    background-color: var(--type-poison);
+    color: black;
+}
+.psychic{
+    background-color: var(--type-psychic);
+    color: black;
+}
+.rock{
+    background-color: var(--type-rock);
+    color: black;
+}
+.steel{
+    background-color: var(--type-steel);
+    color: black;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.search-box{
+    position: sticky;
+    margin-top: 7rem;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+
+body{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #3b4cca; 
+}
+
+main{
+    padding: 4rem;
+    width: 1000px;
+    margin:0 auto;
+}
+
+.pokemon-imagen img{
+    width: 110%;
+}
+
+.pokemon-imagen{
+    margin-top: -10%;
+    margin-bottom: 10%;
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.pokemon-info{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-inline: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.nombre-contenedor{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-id{
+    background-color: gray;
+    padding: 0.25rem 0.25rem;
+    border-radius: 100vmax;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.pokemon-nombre{
+    
+    font-size: 1.4rem;
+}
+
+.pokemon-tipos{
+    display: flex;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.pokemon-tipos{
+    padding: 0.25rem 0.5rem;
+}
+
+.tipo{
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.pokemon-stats{
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+}
+
+.stat{
+    background-color: gray;
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.pokemon-todos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 670px){
+    .pokemon-todos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .pokemon-todos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.pokemon{
+    margin-top: 5rem;;
+    border-radius: 1rem;
+    background-color: #EDEADE;
+    box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.2);
+    padding-block: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    box-shadow: 4px 4px black;
+    border: 4px solid black;
+}
+
+
+.content{
+    position: relative;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+h1{
+    margin-top: 20px;
+    color: #FFCB05;
+}
+
+.search-box{
+    margin-top: 10px;
+}
+
+.header-content {
+  position: fixed;
+  top: 0;
+  left: 20%;   /* ajusta este valor al ancho real de tu aside */
+  right: 0;
+  background: #3b4cca; /* mismo color de fondo que usas en las tarjetas */
+  z-index: 1;
+}
+
+/* Empuja hacia abajo la lista para que no se superponga */
+#todos {
+  margin-top: 120px; /* ajusta según la altura de tu header */
+}
+
+/* Caja de búsqueda */
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /*Espacio entre el input y el botón de búsquesa*/
+    margin-bottom: 30px;
+}
+
+
+input[type="text"]{
+    margin-top: 30px;
+    padding: .5rem;
+    border: 1px;
+    border-radius: .5rem;
+    font-size: .9rem;
+}
+
+.search-box input{
+    padding: 10px;
+    font-size: 12px;
+    width: 400px;
+    height: 30px;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+
+#submit{
+    height: 30px;
+    margin-left: 15px;
+    transform: translateY(50%);
+    font-size: 10px;
+}
+
+
+ /* Fin caja de búsqueda */
+
+.container{
+    display:flex;
+}
+
+
+/* Info Pokemon */
+
+
+
+
+/* Fin Pokemon Grid */
+
+.sidebar{
+    position: sticky;
+    top:0; 
+    height: 100vh;
+    width: 20%;
+    background: #2c3e50;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+    overflow-y: auto;
+    border-right: 2px solid black;
+    
+}
+
+.sidebar .btn{
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.sidebar::-webkit-scrollbar{
+    display: none;
+}
+
+
+.btn{
+
+    position: relative;
+    background: #34495e;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    border: none;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 16px;
+    overflow: hidden;
+    transition: background 0.3s ease;
+
+
+}
+
+
+/**------------------------------------Hover para TODOS los botones-------------------------------------*/
+
+.btn{
+    transition: all 0.3s cubic-bezier(.28,.84,.42,1.1); /*Rebote del botón*/
+}
+
+.btn:hover{
+    background: #1abc9c;
+    transform: translateY(-2px); /*se levante */
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3); /*Sombra del botón*/
+}
+
+.btn:active {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 10px rgba(0,0,0,2);
+      transition: all 0.15s ease-out; /* más rápido al presionar */
+    }
+
+/**------------------------------------ Fin Hover para TODOS los botones-------------------------------------*/
+
+
+/** Efecto de iconos POR BOTÓN*/
+
+/* Fire */
+
+.sidebar .btn.fire{
+    background-color: #EC5800;
+    z-index: 1;
+}
+
+.sidebar .btn.fire:hover{
+    background-color: #e6001a;
+}
+
+.sidebar .btn.fire::after{
+    content: "";
+    position: absolute;
+    right: 900px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/fire.png");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.fire:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Fire*/
+
+
+/* Botón Water */
+
+.sidebar .btn.water{
+    background-color: #70e0bb;
+    z-index: 1;
+}
+
+.sidebar .btn.water:hover{
+    background-color: #378e8e;
+}
+
+.sidebar .btn.water::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -60%);
+    width: 220px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/water.jpg");
+    background-size: 110%, 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.water:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Water*/
+
+/* Grass */
+
+.sidebar .btn.grass{
+    background-color: #68b023;
+    z-index: 1;
+}
+
+.sidebar .btn.grass:hover{
+    background-color: #559419;
+}
+
+.sidebar .btn.grass::after{
+    content: "";
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translate(50%, -45%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/grass.png");
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.grass:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Grass*/
+
+/*  Bug*/
+
+.sidebar .btn.bug{
+    background-color: #e8e878;
+    z-index: 1;
+}
+
+.sidebar .btn.bug:hover{
+    background-color: #d0c860;
+}
+
+.sidebar .btn.bug::after{
+    content: "";
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translate(10%, -60%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/bug.png");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease; 
+}
+
+.sidebar .btn.bug:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Bug*/
+
+
+.sidebar .btn.dark{
+    background-color: #400a58;
+    z-index: 1;
+}
+
+.sidebar .btn.dark:hover{
+    background-color: #c3cdd6;
+}
+
+.sidebar .btn.dark::after{
+    content: "";
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translate(40%, -40%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/dark.png");
+    background-size: 40%, 40%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.dark:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Dark */
+
+
+/* Dragon */
+
+.sidebar .btn.dragon{
+    background-color: #e6b05d;
+    z-index: 1;
+}
+
+.sidebar .btn.dragon:hover{
+    background-color: #be823c;
+}
+
+.sidebar .btn.dragon::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(20%, -60%);
+    width: 220px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/dragon.png");
+    background-size: 70%, 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.dragon:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Dragon */
+
+
+/* Fairy*/
+
+.sidebar .btn.fairy{
+    background-color: #ffc3d0;
+    z-index: 1;
+}
+
+.sidebar .btn.fairy:hover{
+    background-color: #ffadbd;
+}
+
+.sidebar .btn.fairy::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(40%, -50%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/fairy.png");
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.fairy:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Fairy */
+
+/* Fighting */
+
+.sidebar .btn.fighting{
+    background-color: #bd3c5a;
+    z-index: 1;
+}
+
+.sidebar .btn.fighting:hover{
+    background-color: #fc6344;
+}
+
+.sidebar .btn.fighting::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(40%, -50%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/fighting.png");
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.fighting:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Fighting */
+
+/* Flying */
+
+.sidebar .btn.flying{
+    background-color: #4a7ca7;
+    z-index: 1;
+}
+
+.sidebar .btn.flying:hover{
+    background-color: #5299cd;
+}
+
+.sidebar .btn.flying::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(40%, -60%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/flying.png");
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.flying:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Flying */
+
+/* Ghost */
+
+.sidebar .btn.ghost{
+    background-color: #866db6;
+    z-index: 1;
+}
+
+.sidebar .btn.ghost:hover{
+    background-color: #4d2c4d;
+}
+
+.sidebar .btn.ghost::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(20%, -50%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/ghost.png");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.ghost:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Ghost */
+
+/* Ground */ 
+
+.sidebar .btn.ground{
+    background-color: #E2BF65;
+    z-index: 1;
+}
+
+.sidebar .btn.ground:hover{
+    background-color: #c8a048;
+}
+
+.sidebar .btn.ground::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(1.5%, -60%);
+    width: 220px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/ground.png");
+    background-size: 110%, 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.ground:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+/* Fin Ground */
+
+/* Electric */
+
+.sidebar .btn.electric{
+    background-color: #f8f818;
+    z-index: 1;
+}
+
+.sidebar .btn.electric:hover{
+    background-color: #f3ae33;
+}
+
+.sidebar .btn.electric::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(50%, -60%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/electric.png");
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.electric:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Electric */
+
+/* Ice */
+
+.sidebar .btn.ice{
+    background-color: #6ac6de;
+    z-index: 1;
+}
+
+.sidebar .btn.ice:hover{
+    background-color: #4a79a4;
+}
+
+.sidebar .btn.ice::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(50%, -45%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/ice.png");
+    background-size: 45%, 45%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.ice:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Ice */
+
+/* Poison */
+
+.sidebar .btn.poison{
+    background-color: #a584ce;
+    z-index: 1;
+}
+
+.sidebar .btn.poison:hover{
+    background-color: #7b63ad;
+}
+
+.sidebar .btn.poison::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(50%, -45%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/poison.png");
+    background-size: 45%, 45%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.poison:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Poison */
+
+/* Psychic */
+
+.sidebar .btn.psychic{
+    background-color: #c9a8c7;
+    z-index: 1;
+}
+
+.sidebar .btn.psychic:hover{
+    background-color: #875575;
+}
+
+.sidebar .btn.psychic::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(50%, -60%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/psychic.png");
+    background-size: 45%, 45%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.psychic:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Psychich */
+
+/* Rock */ 
+
+.sidebar .btn.rock{
+    background-color: #beb6b6;
+    z-index: 1;
+}
+
+.sidebar .btn.rock:hover{
+    background-color: #3d3434;
+}
+
+.sidebar .btn.rock::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(50%, -60%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/rock.png");
+    background-size: 60%, 60%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.rock:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Rock */
+
+/* Metal */
+
+.sidebar .btn.steel{
+    background-color: #b0a9a7;
+    z-index: 1;
+}
+
+.sidebar .btn.steel:hover{
+    background-color: #636467;
+}
+
+.sidebar .btn.steel::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(40%, -35%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/steel.png");
+    background-size: 60%, 60%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.steel:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin Steel */
+
+/* All */
+
+.sidebar .btn.all{
+    background-color: #3b4cca;
+    z-index: 1;
+}
+
+.sidebar .btn.all:hover{
+    background-color: #cc0000;
+}
+
+.sidebar .btn.all::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -60%);
+    width: 220px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/all.png");
+    background-size: 110%, 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.all:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}
+
+/* Fin All */
+
+/* Normal */
+
+.sidebar .btn.normal{
+    background-color: #A8A77A;
+    z-index: 1;
+}
+
+.sidebar .btn.normal:hover{
+    background-color: #757455;
+}
+
+.sidebar .btn.normal::after{
+    content: "";
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translate(60%, -40%);
+    width: 100px;
+    height: 50px;
+    background-image: url("C:/Users/rplaz/OneDrive/Documentos/Universidad/Noveno Semestre/Desarrollo Web/Pokemones/Elementos/normal.png");
+    background-size: 40%, 40%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.sidebar .btn.normal:hover::after{
+    opacity: 1;
+    right: 5px;
+    z-index: -1;
+}

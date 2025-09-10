@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title> Pokemon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div class = "container">
+       <!--Panel de botones-->
+       <aside class = "sidebar">
+            <button class = "btn btn-header all" id="all">All</button>
+            <button class = "btn btn-header normal" id="normal">Normal</button>
+            <button class = "btn btn-header fire" id="fire">Fire</button>
+            <button class = "btn btn-header water" id="water">Water</button>
+            <button class = "btn btn-header grass" id="grass">Grass</button>
+            <button class = "btn btn-header bug" id="bug">Bug</button>
+            <button class = "btn btn-header dark" id="dark">Dark</button>
+            <button class = "btn btn-header dragon" id="dragon">Dragon</button>
+            <button class = "btn btn-header fairy" id="fairy">Fairy</button>
+            <button class = "btn btn-header fighting" id="fighting">Fighting</button>
+            <button class = "btn btn-header flying" id="flying">Flying</button>
+            <button class = "btn btn-header ghost" id="ghost">Ghost</button>
+            <button class = "btn btn-header ground" id="ground">Ground</button>
+            <button class = "btn btn-header electric" id="electric">Electric</button>
+            <button class = "btn btn-header ice" id="ice">Ice</button>
+            <button class = "btn btn-header poison" id="poison">Poison</button>
+            <button class = "btn btn-header psychic" id="psychic">Psychic</button>
+            <button class = "btn btn-header rock" id="rock">Rock</button>
+            <button class = "btn btn-header steel" id="steel">Steel</button>
+
+       </aside>
+
+
+       <!--Principal-->
+       
+       <main class="content">
+        <div class="header-content">
+            <h1>Pokedex</h1>
+
+            <!--Barra de búsqueda-->
+
+            <div class="search-box">
+                <input type="text" id="search" placeholder="¿Qué Pokemon estás buscando?">
+                <button class="btn btn-search submit" id="submit">¡Buscar!</button>
+            </div>
+        </div>
+
+            <div id = "todos">
+                <div class = "pokemon-todos" id="lista-pokemon">
+                    <!--<div class = "pokemon">
+                        <div class="pokemon-imagen">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt = "Pikachu">
+
+                        </div>
+                        <div class="pokemon-info">
+                            <div class="nombre-contenedor">
+                                <p class="pokemon-id">#25</p>
+                                <h2 class="pokemon-nombre">Pikachu</h2>
+                            </div>
+                            <div class="pokemon-tipos">
+                                <p class="electric tipo">Electric</p>
+                                <p class="fighting tipo">Fighting</p>
+                            </div>
+
+                            <div class="pokemon-stats">
+                                <p class="stat">4M</p>
+                                <p class="stat">60KG</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+       </main>
+
+       <script src="app.js"></script>
+    </div>
+</body>
+
+
+</html>
